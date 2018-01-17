@@ -4,23 +4,24 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-    <servlet-name>hello</servlet-name>
-    <servlet-class>com.test.servlet.Hello</servlet-class>
-  </servlet>
+  
   <servlet>
     <servlet-name>basket</servlet-name>
     <servlet-class>com.test.servlet.BasketServlet</servlet-class>
   </servlet>
   
+  <servlet>
+    <servlet-name>product</servlet-name>
+    <servlet-class>com.test.servlet.ProductServlet</servlet-class>
+  </servlet>
   
-  <servlet-mapping>
-    <servlet-name>hello</servlet-name>
-    <url-pattern>/</url-pattern>
-  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>basket</servlet-name>
     <url-pattern>/basket</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>product</servlet-name>
+    <url-pattern>/product</url-pattern>
   </servlet-mapping>
   
 </web-app>
