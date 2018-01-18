@@ -1,9 +1,5 @@
 package com.test.entity;
 
-//import com.fasterxml.jackson.annotation.JsonCreator;
-//import com.fasterxml.jackson.annotation.JsonIgnore;
-//import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +11,7 @@ public class Order {
     public Order() {
     }
 
-//    @JsonCreator
+
     public Order(String fullName,String telephone) {
         this.fullName = fullName;
         this.telephone = telephone;
@@ -37,7 +33,6 @@ public class Order {
         this.telephone = telephone;
     }
 
-//    @JsonIgnore
     private List<Product> list= new ArrayList<>();
 
     public List<Product> getList() {
