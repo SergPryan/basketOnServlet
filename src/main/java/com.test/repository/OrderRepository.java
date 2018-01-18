@@ -23,10 +23,14 @@ public class OrderRepository {
             statement.setString(2,order.getTelephone());
             statement.executeQuery();
             order.setId(statement.getGeneratedKeys().getLong(1));
-            Statement statementProduct = connection.createStatement();
-//            order.getList().forEach(element ->{
-//
-//            });
+            statement.close();
+            PreparedStatement statementProduct = connection.prepareStatement(INSERT_PRODUCT);
+            for(int i=0;i<order.getList().size();i++){
+                statementProduct.setString(1,order.getId().toString());
+                statementProduct.setString(2,order.getList().get(i).toString());
+                statementProduct.execute();
+            }
+            statementProduct.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -1,0 +1,21 @@
+<h1>Корзина</h1>
+<table>
+    <tr>
+        <th>Название товара</th>
+        <th>Цена</th>
+    </tr>
+    <tr ng-repeat="product in productsInBasket">
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>
+            <button ng-click="deleteFromBasket($index)">Удалить</button>
+        </td>
+    </tr>
+</table>
+<label>ФИО
+    <input type="text" ng-model="fullName">
+</label><br>
+<label>Телефон
+    <input type="text" ng-model="telephone">
+</label>
+<button ng-click="createOrder()">Сделать заказ</button>

@@ -1,0 +1,13 @@
+<table>
+    <tr>
+        <th>Название товара</th>
+        <th>Цена</th>
+    </tr>
+    <tr ng-repeat="product in products">
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>
+            <button ng-click="addToBasket($index)">Добавить</button>
+        </td>
+    </tr>
+</table>
